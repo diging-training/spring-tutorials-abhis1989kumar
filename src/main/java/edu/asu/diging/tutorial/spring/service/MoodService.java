@@ -13,6 +13,7 @@ import edu.asu.diging.tutorial.spring.domain.Mood;
 public class MoodService {
  
 public static int counter=0;
+
 	public Mood getCurrentMood() {
 		
 		
@@ -26,4 +27,30 @@ public static int counter=0;
         counter=randomNum;
 		return new Mood(randomNum);
     }
+	
+	
+	public String getExplanation(String mood) {
+		
+		String output="";
+		switch (mood) {
+		case "sad":
+			output="I had a very long day!!!";
+			break;
+		case "happy":
+		
+			output="Boss asked me take a leave tomorrow";
+			break;
+			
+		case "tired":
+			
+			output="slept late at night";
+			break;
+			
+		case "confused":
+		output="i dont know what is life all about ..unicorns maybe!!!";
+		}
+		
+		return output;
+	
+	}
 }
